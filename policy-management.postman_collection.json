@@ -1,285 +1,203 @@
 {
-	"id": "bd4cd672-7115-0228-01be-2d91b06351c9",
-	"name": "policy-management",
-	"description": "",
-	"order": [
-		"a455fa2f-1ea0-03f6-0879-34cb087e56dd",
-		"7ae6397d-14fe-f0c6-70a9-7ca945f4ad84",
-		"2979afc7-3577-7bff-3a67-69d538864109",
-		"824f269c-a9a2-7d6e-e118-d22fcb1d9b6b",
-		"9ccf41b5-1257-08f6-ad2a-4cb304bc019b",
-		"09cbde0e-58a5-8f88-9642-f5d15857c424",
-		"783abb46-385b-ed70-b636-fb70e36245ba",
-		"2531bfa9-dc46-21bf-4caf-5871ee8db0f8"
-	],
-	"folders": [],
-	"folders_order": [],
-	"timestamp": 1621419214904,
-	"owner": 0,
-	"public": false,
-	"requests": [
+	"variables": [],
+	"info": {
+		"name": "policy-management",
+		"_postman_id": "bd4cd672-7115-0228-01be-2d91b06351c9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
 		{
-			"id": "09cbde0e-58a5-8f88-9642-f5d15857c424",
-			"headers": "Authorization: Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEzMjU5MDEsImV4cCI6MTYyMTQxMjMwMX0.m_0ueKyPEZeP64Yxft6kAR3LHxaSKpw70mP_7HGX-Bo-hLpik9x-_WHsJpgR5EixfJKD8FXvJG208xL9fTYpqw\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEzMjU5MDEsImV4cCI6MTYyMTQxMjMwMX0.m_0ueKyPEZeP64Yxft6kAR3LHxaSKpw70mP_7HGX-Bo-hLpik9x-_WHsJpgR5EixfJKD8FXvJG208xL9fTYpqw",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/api/policy/deregister/akshay/5",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "bd4cd672-7115-0228-01be-2d91b06351c9",
-			"data": null,
-			"dataMode": "params",
-			"name": "http://localhost:8080/api/policy/deregister/akshay/5",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1621419259845,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
-		},
-		{
-			"id": "2531bfa9-dc46-21bf-4caf-5871ee8db0f8",
-			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjA4MTUxMjMsImV4cCI6MTYyMDkwMTUyM30.D2g_0GvQWW-afgehsciaz_B1jxCniuz82DB6sKYSGfID0pj1fZv8qlWFKYQVHkH6iR30gYu4BZ20F2GtvbXbNw\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjA4MTUxMjMsImV4cCI6MTYyMDkwMTUyM30.D2g_0GvQWW-afgehsciaz_B1jxCniuz82DB6sKYSGfID0pj1fZv8qlWFKYQVHkH6iR30gYu4BZ20F2GtvbXbNw",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/api/policy/all",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "bd4cd672-7115-0228-01be-2d91b06351c9",
-			"data": null,
-			"dataMode": "params",
 			"name": "http://localhost:8080/api/policy/all",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1621419270236,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
+			"request": {
+				"url": "http://localhost:8080/api/policy/all",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEyNDA5MTQsImV4cCI6MTYyMTMyNzMxNH0.XT3YucUlE7UDUWS9jsWXo7KkcQMiAnMKGrc-hD76TcT5uQWlJbax__qIE25j96VBK5nd2SoVDOGMt3W7VZVcdg",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		},
 		{
-			"id": "2979afc7-3577-7bff-3a67-69d538864109",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/api/auth/signup",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "POST",
-			"collectionId": "bd4cd672-7115-0228-01be-2d91b06351c9",
-			"data": [],
-			"dataMode": "raw",
-			"name": "http://localhost:8080/api/auth/signup",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1621419240723,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"rawModeData": "{\n  \"username\": \"akshay123\",\n  \"email\": \"akshayshilawane121@gmail.com\",\n  \"password\": \"Akshay123\"\n}"
-		},
-		{
-			"id": "783abb46-385b-ed70-b636-fb70e36245ba",
-			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjA4MTUxMjMsImV4cCI6MTYyMDkwMTUyM30.D2g_0GvQWW-afgehsciaz_B1jxCniuz82DB6sKYSGfID0pj1fZv8qlWFKYQVHkH6iR30gYu4BZ20F2GtvbXbNw\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjA4MTUxMjMsImV4cCI6MTYyMDkwMTUyM30.D2g_0GvQWW-afgehsciaz_B1jxCniuz82DB6sKYSGfID0pj1fZv8qlWFKYQVHkH6iR30gYu4BZ20F2GtvbXbNw",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/api/policy/delete?policyId=90",
-			"queryParams": [
-				{
-					"key": "policyId",
-					"value": "90",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "DELETE",
-			"collectionId": "bd4cd672-7115-0228-01be-2d91b06351c9",
-			"data": null,
-			"dataMode": "params",
-			"name": "http://localhost:8080/api/policy/delete?policyId=90",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1621419264813,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
-		},
-		{
-			"id": "7ae6397d-14fe-f0c6-70a9-7ca945f4ad84",
-			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEzMjU5MDEsImV4cCI6MTYyMTQxMjMwMX0.m_0ueKyPEZeP64Yxft6kAR3LHxaSKpw70mP_7HGX-Bo-hLpik9x-_WHsJpgR5EixfJKD8FXvJG208xL9fTYpqw\nContent-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEzMjU5MDEsImV4cCI6MTYyMTQxMjMwMX0.m_0ueKyPEZeP64Yxft6kAR3LHxaSKpw70mP_7HGX-Bo-hLpik9x-_WHsJpgR5EixfJKD8FXvJG208xL9fTYpqw",
-					"description": "",
-					"enabled": true
-				},
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/api/policy/save",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "POST",
-			"collectionId": "bd4cd672-7115-0228-01be-2d91b06351c9",
-			"data": [],
-			"dataMode": "raw",
 			"name": "http://localhost:8080/api/policy/save",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1621419235168,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"rawModeData": "{\n       \"policyId\": 4,\n    \"policyName\": \"Policy4\",\n    \"policyType\": \"Accidental\",\n    \"description\": \"ICICI Lombard Complete Health Insurance policy secures your finances against sudden medical expenses. It is a comprehensive policy for you and your family, designed to cater to most of your common healthcare needs. It comes with an option to include your family under one policy called the family floater option. You can choose coverage for your family health insurance as per your medical needs such as maternity cover, OPD cover, critical illness cover, donor expenses cover, etc. Some of its noteworthy features include no limit on hospital room rent, no co-pay, no pre-medical check-up up to 45 years of age and 2 complimentary health check-up coupons every year for a family floater health insurance policy. As a result, it is one of the preferred health insurance policies in India.\",\n    \"years\": 30,\n    \"premium\": 1000,\n    \"sumAssured\": 100000\n    }"
+			"request": {
+				"url": "http://localhost:8080/api/policy/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEzMjU5MDEsImV4cCI6MTYyMTQxMjMwMX0.m_0ueKyPEZeP64Yxft6kAR3LHxaSKpw70mP_7HGX-Bo-hLpik9x-_WHsJpgR5EixfJKD8FXvJG208xL9fTYpqw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"policyId\": 4,\n    \"policyName\": \"Policy4\",\n    \"policyType\": \"Accidental\",\n    \"description\": \"ICICI Lombard Complete Health Insurance policy secures your finances against sudden medical expenses. It is a comprehensive policy for you and your family, designed to cater to most of your common healthcare needs. It comes with an option to include your family under one policy called the family floater option. You can choose coverage for your family health insurance as per your medical needs such as maternity cover, OPD cover, critical illness cover, donor expenses cover, etc. Some of its noteworthy features include no limit on hospital room rent, no co-pay, no pre-medical check-up up to 45 years of age and 2 complimentary health check-up coupons every year for a family floater health insurance policy. As a result, it is one of the preferred health insurance policies in India.\",\n    \"years\": 30,\n    \"premium\": 1000,\n    \"sumAssured\": 100000\n    }"
+				},
+				"description": ""
+			},
+			"response": []
 		},
 		{
-			"id": "824f269c-a9a2-7d6e-e118-d22fcb1d9b6b",
-			"headers": "Content-Type: application/json\n",
-			"headerData": [
-				{
-					"key": "Content-Type",
-					"value": "application/json",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/api/auth/signin",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "POST",
-			"collectionId": "bd4cd672-7115-0228-01be-2d91b06351c9",
-			"data": [],
-			"dataMode": "raw",
+			"name": "http://localhost:8080/api/auth/signup",
+			"request": {
+				"url": "http://localhost:8080/api/auth/signup",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"akshay123\",\n  \"email\": \"akshayshilawane121@gmail.com\",\n  \"password\": \"Akshay123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
 			"name": "http://localhost:8080/api/auth/signin",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1621419245995,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"rawModeData": "{\n  \"username\": \"akshay\",\n  \"password\": \"Akshay123\"\n}"
+			"request": {
+				"url": "http://localhost:8080/api/auth/signin",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\": \"akshay\",\n  \"password\": \"Akshay123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
 		},
 		{
-			"id": "9ccf41b5-1257-08f6-ad2a-4cb304bc019b",
-			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEyNDA5MTQsImV4cCI6MTYyMTMyNzMxNH0.XT3YucUlE7UDUWS9jsWXo7KkcQMiAnMKGrc-hD76TcT5uQWlJbax__qIE25j96VBK5nd2SoVDOGMt3W7VZVcdg\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEyNDA5MTQsImV4cCI6MTYyMTMyNzMxNH0.XT3YucUlE7UDUWS9jsWXo7KkcQMiAnMKGrc-hD76TcT5uQWlJbax__qIE25j96VBK5nd2SoVDOGMt3W7VZVcdg",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/api/policy/user?username=akshay",
-			"queryParams": [
-				{
-					"key": "username",
-					"value": "akshay",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "bd4cd672-7115-0228-01be-2d91b06351c9",
-			"data": null,
-			"dataMode": "params",
 			"name": "http://localhost:8080/api/policy/user?username=akshay",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1621419252661,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/policy/user?username=akshay",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"policy",
+						"user"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "akshay",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEyNDA5MTQsImV4cCI6MTYyMTMyNzMxNH0.XT3YucUlE7UDUWS9jsWXo7KkcQMiAnMKGrc-hD76TcT5uQWlJbax__qIE25j96VBK5nd2SoVDOGMt3W7VZVcdg",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		},
 		{
-			"id": "a455fa2f-1ea0-03f6-0879-34cb087e56dd",
-			"headers": "Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEyNDA5MTQsImV4cCI6MTYyMTMyNzMxNH0.XT3YucUlE7UDUWS9jsWXo7KkcQMiAnMKGrc-hD76TcT5uQWlJbax__qIE25j96VBK5nd2SoVDOGMt3W7VZVcdg\n",
-			"headerData": [
-				{
-					"key": "Authorization",
-					"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEyNDA5MTQsImV4cCI6MTYyMTMyNzMxNH0.XT3YucUlE7UDUWS9jsWXo7KkcQMiAnMKGrc-hD76TcT5uQWlJbax__qIE25j96VBK5nd2SoVDOGMt3W7VZVcdg",
-					"description": "",
-					"enabled": true
-				}
-			],
-			"url": "http://localhost:8080/api/policy/all",
-			"queryParams": [],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1621419228436,
+			"name": "http://localhost:8080/api/policy/deregister/akshay/5",
+			"request": {
+				"url": "http://localhost:8080/api/policy/deregister/akshay/5",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjEzMjU5MDEsImV4cCI6MTYyMTQxMjMwMX0.m_0ueKyPEZeP64Yxft6kAR3LHxaSKpw70mP_7HGX-Bo-hLpik9x-_WHsJpgR5EixfJKD8FXvJG208xL9fTYpqw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/policy/delete?policyId=90",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/policy/delete?policyId=90",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"policy",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "policyId",
+							"value": "90",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjA4MTUxMjMsImV4cCI6MTYyMDkwMTUyM30.D2g_0GvQWW-afgehsciaz_B1jxCniuz82DB6sKYSGfID0pj1fZv8qlWFKYQVHkH6iR30gYu4BZ20F2GtvbXbNw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
 			"name": "http://localhost:8080/api/policy/all",
-			"description": "",
-			"collectionId": "bd4cd672-7115-0228-01be-2d91b06351c9",
-			"responses": []
+			"request": {
+				"url": "http://localhost:8080/api/policy/all",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJha3NoYXkiLCJpYXQiOjE2MjA4MTUxMjMsImV4cCI6MTYyMDkwMTUyM30.D2g_0GvQWW-afgehsciaz_B1jxCniuz82DB6sKYSGfID0pj1fZv8qlWFKYQVHkH6iR30gYu4BZ20F2GtvbXbNw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
