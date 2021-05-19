@@ -1,0 +1,52 @@
+     CREATE TABLE IF NOT EXISTS users
+(
+    user_id serial NOT NULL PRIMARY KEY,
+    username character varying(255)  NOT NULL UNIQUE,
+    password character varying(255)  NOT NULL,
+    email character varying(255)  NOT NULL UNIQUE,
+    
+)
+
+CREATE TABLE IF NOT EXISTS policies (
+		policy_id serial PRIMARY KEY,
+	    policy_name VARCHAR ( 255 ) NOT NULL ,
+		policy_type VARCHAR ( 255 ) NOT NULL,
+		description VARCHAR ( 255 ) NOT NULL,
+		years INT  NOT NULL
+	);
+
+	ALTER TABLE policies
+	ADD policy_status VARCHAR (20) NOT NULL,
+	ADD premium INT NOT NULL,
+	ADD sum_assured INT  NOT NULL;
+
+CREATE TABLE IF NOT EXISTS user_policies (	
+	  user_id INT NOT NULL,
+	  policy_id INT NOT NULL,
+	  PRIMARY KEY (user_id, policy_id),
+	  FOREIGN KEY (policy_id)
+		  REFERENCES policies (policy_id),
+	  FOREIGN KEY (user_id)
+		  REFERENCES users (user_id)
+		
+	);
+
+
+     CREATE TABLE IF NOT EXISTS roles
+(
+    role_id serial NOT NULL PRIMARY KEY,
+    role_name VARCHAR varying(255) NOT NULL UNIQUE
+)
+
+
+    CREATE TABLE IF NOT EXISTS user_roles (	
+	  user_id INT NOT NULL,
+	  role_id INT NOT NULL,
+	  PRIMARY KEY (user_id, role_id),
+	  FOREIGN KEY (policy_id)
+		  REFERENCES roles (role_id),
+	  FOREIGN KEY (user_id)
+		  REFERENCES users (user_id)
+		
+	);
+
