@@ -1,0 +1,139 @@
+<header class="jumbotron">
+    <h3>
+      <strong>Add Policy</strong>
+    </h3>
+  </header>
+  <ngb-alert #selfClosingAlert *ngIf="successMessage"  type="success" (closed)="successMessage = ''">{{ successMessage }}
+  </ngb-alert>
+  <ngb-alert #selfClosingAlert *ngIf="errorMessage"  type="danger" (closed)="successMessage = ''">{{ errorMessage }}
+  </ngb-alert>
+  <div class="policy-form">
+    <form
+      name="policy"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      ngNativeValidate
+    >
+      <div class="form-group row">
+        <label for="policyName" class="col-sm-3 col-form-label"
+          >Policy Name</label
+        >
+        <div class="col-sm-9">
+          <input
+            type="text"
+            class="form-control"
+            name="policyName"
+            [(ngModel)]="policy.policyName"
+            required
+            #policyName="ngModel"
+            minlength="5"
+          />
+          <div [hidden]="policyName.valid || policyName.untouched" class ="alert alert-danger">
+            Policy name required with minimum 5 characters
+          </div>
+          
+        </div>
+  
+      </div>
+      <div class="form-group row">
+        <label for="policyType" class="col-sm-3 col-form-label"
+          >Policy Type</label
+        >
+        <div class="col-sm-9">
+          <input
+            type="text"
+            class="form-control"
+            name="policyType"
+            [(ngModel)]="policy.policyType"
+            required
+            #policyType="ngModel"
+            
+          />
+          <div [hidden]="policyType.valid || policyType.untouched" class ="alert alert-danger">
+            Policy Type required !
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="description" class="col-sm-3 col-form-label"
+          >Description</label
+        >
+        <div class="col-sm-9">
+          <textarea
+            type="text"
+            class="form-control"
+            name="description"
+            [(ngModel)]="policy.description"
+            required
+            #description="ngModel"
+          ></textarea>
+          <div [hidden]="description.valid || description.untouched" class ="alert alert-danger">
+            Policy description  required !
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="sumAssured" class="col-sm-3 col-form-label"
+          >Sum Assured Amount</label
+        >
+        <div class="col-sm-9">
+          <input
+            type="number"
+            class="form-control"
+            name="sumAssured"
+            [(ngModel)]="policy.sumAssured"
+            #sumAssured="ngModel"
+            required
+            pattern="^[0-9]*$"
+          />
+          <div [hidden]="sumAssured.valid || sumAssured.untouched" class ="alert alert-danger">
+            Enter only positive number !
+          </div>
+        </div>
+      
+      </div>
+  
+      <div class="form-group row">
+        <label for="premium" class="col-sm-3 col-form-label"
+          >Premium Amount</label
+        >
+        <div class="col-sm-9">
+          <input
+            type="number"
+            class="form-control"
+            name="premium"
+            [(ngModel)]="policy.premium"
+            required
+            #premium="ngModel"
+            pattern="^[0-9]*$"
+          />
+          <div [hidden]="premium.valid || premium.untouched" class ="alert alert-danger">
+            Enter only positive number !
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="years" class="col-sm-3 col-form-label">Years</label>
+        <div class="col-sm-9">
+          <input
+            type="number"
+            class="form-control"
+            name="years"
+            [(ngModel)]="policy.years"
+            required
+            #years="ngModel"
+            pattern="^[0-9]*$"
+            max="99"
+          />
+          <div [hidden]="years.valid || years.untouched " class ="alert alert-danger">
+            Enter only positive number !
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="col-sm-12 text-center">
+        <button type="submit" class="btn btn-secondary">Save</button>
+      </div>
+    </form>
+  </div>
+  

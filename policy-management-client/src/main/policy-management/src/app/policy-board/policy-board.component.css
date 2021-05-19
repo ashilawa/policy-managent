@@ -1,0 +1,10 @@
+.table{
+    margin-top: 1rem;
+}
+.btn{
+    width: 5rem;
+}
+.btn-right{
+    position: absolute;
+    right: 15px;;
+}

@@ -1,0 +1,179 @@
+<ngb-alert #selfClosingAlert *ngIf="successMessage && isSuccess"  type="success" (closed)="successMessage = ''">{{ successMessage }}
+</ngb-alert>
+<ngb-alert #selfClosingAlert *ngIf="successMessage && !isSuccess "  type="danger" (closed)="successMessage = ''">{{ successMessage }}
+</ngb-alert>
+<div >
+  <header class="jumbotron">
+    <h3>
+      <strong>All Policies</strong>  
+    <a href="/policy"  class="btn btn-primary float-right"  routerLink="policy" ngbTooltip="Add policy" *ngIf="showAdmin">Add</a>
+    </h3>
+  </header>
+   <div >
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th class="w-20" scope="col">ID</th>
+          <th class="w-25" scope="col">Policy Name</th>
+          <th class="w-25" scope="col">Policy Type</th>
+          <th class="w-25" scope="col">Premium Amount</th>
+          <th class="w-25" scope="col">Sum Assured Amount</th>
+          <th  scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let policy of policies">
+          <th scope="row">{{policy.policyId}}</th>
+          <td>{{policy.policyName}}</td>
+          <td>{{policy.policyType}}</td>
+          <td>{{policy.premium}}</td>
+          <td>{{policy.sumAssured}}</td>
+          <td  class="btn-group">
+          <button type="button" class="btn btn-outline-primary btn-sm " (click)="openEditModal(editPolicyModal, policy)" *ngIf="showAdmin">Edit</button> 
+          <button type="button" class="btn btn-outline-primary btn-sm " (click)="openEditModal(editPolicyModal, policy)" *ngIf="!showAdmin">view</button> 
+          <button type="button" class="btn btn-outline-danger btn-sm" *ngIf="showAdmin" (click)="openModal(deletePolicyModal, policy)">Delete</button> 
+          <button type="button" class="btn btn-outline-success btn-sm " (click)="onRegister(policy)">Register</button> 
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ng-template #deletePolicyModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="deletePolicyLabel">Delete Policy Alert !</h5>
+    <button
+      type="button"
+      class="close"
+      (click)="modal.dismiss()"
+      aria-label="Close"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <p>Are you sure you want to delete?</p>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="modal.dismiss()"
+        >
+          Close
+        </button>
+        <button type="button" class="btn btn-danger" (click)="onDelete()">Delete</button>
+      </div>
+  </div>
+</ng-template>
+
+
+<ng-template #editPolicyModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title" id="editPolicyLabel" *ngIf="showAdmin">Edit Profile</h5>
+    <h5 class="modal-title" id="editPolicyLabel" *ngIf="!showAdmin">View Profile</h5>
+    <button
+      type="button"
+      class="close"
+      (click)="modal.dismiss()"
+      aria-label="Close"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+    <form [formGroup]="editPolicyForm" (ngSubmit)="onSubmit()">
+      
+      <div class="form-group row">
+        <label for="policyId" class="col-sm-4 col-form-label">Policy ID</label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="policyId"
+            id="policyId"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="policyName" class="col-sm-4 col-form-label">Policy Name</label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="policyName"
+            id="policyName"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="policyType" class="col-sm-4 col-form-label">Policy Type</label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="policyType"
+            id="policyType" 
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="description" class="col-sm-4 col-form-label">Description</label>
+        <div class="col-sm-8">
+          <textarea
+            type="text"
+            class="form-control"
+            formControlName="description"
+            id="description" 
+            rows="6"
+          ></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="sumAssured" class="col-sm-4 col-form-label">Sum Assured Amount</label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="sumAssured"
+            id="sumAssured" 
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="premium" class="col-sm-4 col-form-label">Premium Amount</label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="premium"
+            id="premium" 
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="years" class="col-sm-4 col-form-label">Years</label>
+        <div class="col-sm-8">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="years"
+            id="years" 
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="modal.dismiss()"
+        >
+          Close
+        </button>
+        <button type="submit" class="btn btn-danger" (click)="onSubmit()" *ngIf="showAdmin">Save</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

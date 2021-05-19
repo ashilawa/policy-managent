@@ -1,0 +1,22 @@
+.card {
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  
+  .card-body{
+      padding: 0px;
+  }
+  
+  .table {
+      margin-bottom: 0px;
+  }
+  
+  .modal-content {
+      max-width: 565px;
+      display: none;
+    }
+  
+    .modal-body {
+      max-width: 565px;
+    }
+  

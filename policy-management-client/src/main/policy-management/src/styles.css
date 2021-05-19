@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.container{
+
+    margin: 1rem;
+    padding-right:0px  !important;
+    max-width: 1396px;
+}
+
+.jumbotron {
+    padding: 1rem 1rem;
+    margin-bottom: 0rem;
+}
+button:focus {outline:0;}

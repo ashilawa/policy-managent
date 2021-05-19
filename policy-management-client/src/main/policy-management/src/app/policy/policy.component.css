@@ -1,0 +1,13 @@
+.policy-form{
+
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #e9ecef;
+}
+
+.btn{
+    width: 5rem;
+}
+.ng-invalid:not(form).ng-touched{
+    border: 1px solid red ;
+  }
