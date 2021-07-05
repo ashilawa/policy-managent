@@ -1,7 +1,7 @@
 node{
 
-   def tomcatWeb = 'C:\\installer\\Tomcat\\webapps'
-   def tomcatBin = 'C:\\installer\\Tomcat\\bin'
+   def tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps'
+   def tomcatBin = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\bin'
    def tomcatStatus = ''
    stage('Checkout'){
      git 'https://github.com/ashilawa/policy-managent.git'
@@ -15,7 +15,7 @@ node{
       }
 
    stage('Deploy'){
-     bat "copy policy-management-client\\target\\policy-management.war \"C:\\installer\\Tomcat\\webapps\\policy-management.war\""
+     bat "copy policy-management-client\\target\\policy-management.war \"C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps\\policy-management.war\""
    }
       stage ('Start Tomcat') {
          sleep(time:5,unit:"SECONDS") 
