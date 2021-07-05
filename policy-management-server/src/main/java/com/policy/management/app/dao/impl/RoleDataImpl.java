@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.transaction.Transactional;
+
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -24,4 +26,10 @@ public class RoleDataImpl implements RoleData {
     public Optional<Role> findByRoleName(String roleName) {
         return roleRepository.findByRoleName(roleName);
     }
+
+	@Override
+	public List<Role> findAll() {
+		
+		return roleRepository.findAll();
+	}
 }

@@ -2,7 +2,12 @@ package com.policy.management.app.exception;
 
 public class DuplicateRecordException extends RuntimeException {
 
-    public DuplicateRecordException(String message) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 7287886981674017354L;
+
+	public DuplicateRecordException(String message) {
         super(message);
     }
 }

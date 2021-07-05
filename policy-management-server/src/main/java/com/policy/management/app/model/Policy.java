@@ -121,6 +121,11 @@ public class Policy {
     public void setStatus(PolicyStatus status) {
         this.status = status;
     }
+    
+    @Override
+    public int hashCode() {
+    	return (int) policyId.hashCode();
+    }
 
     @Override
     public boolean equals(Object o) {

@@ -1,4 +1,4 @@
-<div id="app">
+<div id="app"  *ngIf="!serverDown">
   <nav class="navbar navbar-expand navbar-dark bg-dark">
     <a href="#" class="navbar-brand">Policy Management</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active">
@@ -6,7 +6,10 @@
         <a href="/home" class="nav-link" routerLink="home">Home </a>
       </li>
       <li class="nav-item" >
-        <a href="/admin" class="nav-link" routerLink="admin">Policy Board</a>
+        <a href="/policy-board" class="nav-link" routerLink="policy-board">Policy Board</a>
+      </li>
+      <li class="nav-item" >
+        <a href="/user-board" class="nav-link" routerLink="user-board" *ngIf="showSuperAdminBoard" >User Board</a>
       </li>
     </ul>
 
@@ -32,4 +35,9 @@
   <div class="container">
     <router-outlet></router-outlet>
   </div>
+  
+</div>
+
+<div *ngIf="serverDown">
+  <app-error></app-error>
 </div>

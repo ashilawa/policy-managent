@@ -29,9 +29,9 @@
           <td>{{policy.premium}}</td>
           <td>{{policy.sumAssured}}</td>
           <td  class="btn-group">
-          <button type="button" class="btn btn-outline-primary btn-sm " (click)="openEditModal(editPolicyModal, policy)" *ngIf="showAdmin">Edit</button> 
-          <button type="button" class="btn btn-outline-primary btn-sm " (click)="openEditModal(editPolicyModal, policy)" *ngIf="!showAdmin">view</button> 
-          <button type="button" class="btn btn-outline-danger btn-sm" *ngIf="showAdmin" (click)="openModal(deletePolicyModal, policy)">Delete</button> 
+          <button type="button" class="btn btn-outline-primary btn-sm " (click)="openEditModal(editPolicyModal, policy)" *ngIf="showAdmin || showSuperAdminBoard ">Edit</button> 
+          <button type="button" class="btn btn-outline-primary btn-sm " (click)="openEditModal(editPolicyModal, policy)" *ngIf="!showAdmin && !showSuperAdminBoard">view</button> 
+          <button type="button" class="btn btn-outline-danger btn-sm" *ngIf="showAdmin || showSuperAdminBoard" (click)="openModal(deletePolicyModal, policy)">Delete</button> 
           <button type="button" class="btn btn-outline-success btn-sm " (click)="onRegister(policy)">Register</button> 
         </td>
         </tr>

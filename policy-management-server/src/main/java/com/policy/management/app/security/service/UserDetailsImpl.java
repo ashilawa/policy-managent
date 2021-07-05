@@ -89,6 +89,12 @@ public class UserDetailsImpl implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+    
+    @Override
+    public int hashCode() {
+    	
+    	return username.hashCode();
+    }
 
     @Override
     public boolean equals(Object o) {

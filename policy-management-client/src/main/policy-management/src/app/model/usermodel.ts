@@ -7,6 +7,7 @@ export interface IUser {
     email : string,
     password : string,
     roles :  string [],
+    status: string,
     policies : IPolicy []
 
 

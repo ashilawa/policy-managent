@@ -1,0 +1,57 @@
+<header class="jumbotron">
+    <h3>
+        <strong>User Management</strong>
+        <a href="/add-user" class="btn btn-primary float-right" routerLink="add-user" ngbTooltip="Add User">Add</a>
+    </h3>
+</header>
+
+<!-- <div class="form-group ">
+    <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="searchTerm" name="searchTerm">
+</div> -->
+
+<div class="form-group has-search main">
+    <span class="fa fa-search form-control-feedback"></span>
+    <input type="text" class="form-control" placeholder="Search"  [(ngModel)]="searchTerm" name="searchTerm">
+  </div>
+
+<div>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th class="w-20" scope="col">ID</th>
+                <th class="w-25" scope="col">username</th>
+                <th class="w-25" scope="col">Email</th>
+                <th class="w-25" scope="col">Roles</th>
+                <th class="w-25" scope="col">Status</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users |filter: searchTerm | paginate: config">
+                <td scope="row">{{user.userId}}</td>
+                <th>{{user.username}}</th>
+                <td>{{user.email}}</td>
+                <td><ng-multiselect-dropdown
+                    [placeholder]="'custom placeholder'"
+                    [settings]="dropdownSettings"
+                    [data]="roleList"
+                    [(ngModel)]="user.roles"
+                    (onSelect)="onItemSelect($event)"
+   
+                  >
+                  </ng-multiselect-dropdown></td>
+                <!-- <td>{{user.status}}</td> -->
+                <td>
+                    <select id="role" class="form-control" [(ngModel)]="user.status" (change)="onchange($event)" required >
+                        <option *ngIf="!user.status" [ngValue]="user.status" >Select Status</option>
+                        <option *ngFor="let status of statusType" [ngValue]="status" >{{status}}</option>
+                    </select>
+                </td>
+                <td >
+                    <button type="button" class="btn btn-secondary btn-sm" (click)="onRegister(user)" [disabled]="!click">Update</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <pagination-controls class="float-right" (pageChange)="pageChanged($event)"></pagination-controls>
+</div>

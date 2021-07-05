@@ -14,7 +14,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ErrorComponent } from './error/error.component';
+import { UserManagementComponent } from './user-management/user-management.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     PolicyComponent,
     ProfileComponent,
-    RegisterComponent
+    RegisterComponent,
+    ErrorComponent,
+    UserManagementComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,17 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     NgbModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-top-full-width',
+      preventDuplicates: true,
+      closeButton:true
+    }), 
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
+    NgMultiSelectDropDownModule.forRoot(),
   ],
   providers: [authInterceptorProviders],  bootstrap: [AppComponent]
 })

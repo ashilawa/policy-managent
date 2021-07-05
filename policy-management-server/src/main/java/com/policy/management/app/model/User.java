@@ -3,7 +3,11 @@ package com.policy.management.app.model;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -33,7 +37,14 @@ public class User implements Serializable {
 
     @NotBlank
     @Size(max = 255)
+    @JsonIgnore	
     private String password;
+    
+    @NotBlank
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    private UserStatus status;
+
 
     @ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JoinTable(name = "user_roles",
@@ -104,4 +115,16 @@ public class User implements Serializable {
     public void setPolicies(Set<Policy> policies) {
         this.policies = policies;
     }
+
+	public UserStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(UserStatus status) {
+		this.status = status;
+	}
+
+	
+    
+    
 }

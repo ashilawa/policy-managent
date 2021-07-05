@@ -1,10 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
+/* @import 'css/toastr.css'; */
+@import '~ngx-toastr/toastr';
+@import '~font-awesome/css/font-awesome.css';
+
 .container{
 
     margin: 1rem;
     padding-right:0px  !important;
-    max-width: 1396px;
+    max-width: -webkit-fill-available;
 }
 
 .jumbotron {
